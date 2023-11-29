@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PrescriptionController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="container">
+<H1>Léo LETENEUR</H1>
+    <h1>Prescriptions</h1>
+
+    {% for unPrescription in prescriptions %}
+        <h1>{{unPrescription.date | date('d-m-Y')}} <a href="path('app_add_prescription',(id))"><i class="fa-solid fa-eye"></i></a></h1>
+
+    {% endfor %}
+</div>
+{% endblock %}
